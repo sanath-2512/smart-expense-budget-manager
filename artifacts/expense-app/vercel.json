@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/public"
+      }
+    }
+  ],
+  "outputDirectory": "dist/public",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
