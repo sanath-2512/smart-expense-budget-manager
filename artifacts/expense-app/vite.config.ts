@@ -9,7 +9,7 @@ if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-const basePath = process.env.BASE_PATH || "/";
+const basePath =  "/";
 const apiTarget = process.env.VITE_API_PROXY_TARGET || "";
 
 export default defineConfig({
