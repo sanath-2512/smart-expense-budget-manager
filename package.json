@@ -8,7 +8,7 @@
     "typecheck:libs": "tsc --build",
     "typecheck": "corepack pnpm run typecheck:libs && corepack pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
     "dev:api": "corepack pnpm --filter @workspace/api-server run dev",
-    "dev:web": "corepack pnpm --filter @workspace/expense-app run dev"
+    "dev:web": "corepack pnpm --filter @workspace/expense-app run dev","vercel-install": "corepack enable && pnpm install --no-frozen-lockfile"
   },
   "private": true,
   "devDependencies": {
