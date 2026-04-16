@@ -1,5 +1,11 @@
 import app from "./app";
 import { logger } from "./lib/logger";
+import cors from "cors";
+
+app.use(cors({
+  origin: "https://your-frontend.vercel.app",
+  credentials: true
+}));
 
 const rawPort = process.env["PORT"];
 
