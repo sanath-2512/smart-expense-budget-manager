@@ -3,9 +3,14 @@ import { logger } from "./lib/logger";
 import cors from "cors";
 
 app.use(cors({
-  origin: "https://your-frontend.vercel.app",
+  origin: "https://smart-expense-budget-manager.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+// VERY IMPORTANT 👇
+app.options("*", cors());
 
 const rawPort = process.env["PORT"];
 
