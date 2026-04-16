@@ -9,8 +9,6 @@ app.use(cors({
   credentials: true
 }));
 
-// VERY IMPORTANT 👇
-app.options("*", cors());
 
 const rawPort = process.env["PORT"];
 
